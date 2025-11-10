@@ -3,7 +3,7 @@ name = "astrophysical-app-and-mcp-server"
 version = "0.1.0"
 description = "An OpenAI app and MCP server that answer questions about astrophysical bodies"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.12"
 dependencies = [
     "fastapi[standard]>=0.121.1",
 ]
