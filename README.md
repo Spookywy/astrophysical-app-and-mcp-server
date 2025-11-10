@@ -26,6 +26,12 @@ Below is an example of a curl command to get the ephemerides of Voyager 1 for th
 
 `COMMAND=-31` is the code for Voyager 1.
 
+## Deployment
+
+This server is available at [https://astrophysical-app-and-mcp-server.vercel.app](https://astrophysical-app-and-mcp-server.vercel.app)
+
+The server documentation is available at [https://astrophysical-app-and-mcp-server.vercel.app/docs](https://astrophysical-app-and-mcp-server.vercel.app/docs)
+
 ## Development
 
 Install the dependencies:
