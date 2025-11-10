@@ -4,7 +4,7 @@ This app relies on [ssd.jpl.nasa.gov](https://ssd.jpl.nasa.gov/) api to get the 
 
 ## App
 
-The app consist of an OpenAI app that can answer questions about the position of astrophysical bodies.
+The app consists of an OpenAI app and MCP server that answer questions about astrophysical bodies.
 
 ## MCP server
 
@@ -25,3 +25,17 @@ Below is an example of a curl command to get the ephemerides of Voyager 1 for th
 `STEP_SIZE=1d` indicates that we want the ephemerides at 1 day intervals.
 
 `COMMAND=-31` is the code for Voyager 1.
+
+## Development
+
+Install the dependencies:
+
+```
+uv sync
+```
+
+Run the server:
+
+```
+uv run fastapi dev main.py
+```
