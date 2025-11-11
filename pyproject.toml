@@ -5,6 +5,7 @@ description = "An OpenAI app and MCP server that answer questions about astrophy
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "fastapi-mcp>=0.4.0",
     "fastapi[standard]>=0.121.1",
     "httpx>=0.28.1",
 ]

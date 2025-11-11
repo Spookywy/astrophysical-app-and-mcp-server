@@ -1,12 +1,15 @@
 import httpx
 
-from external_api.api import apiUrl
+from external_api.api import SSD_JPL_NASA_URL, USER_AGENT
 
 
 async def get_ephemerides_data():
     """Fetches ephemerides data from the external API."""
     async with httpx.AsyncClient() as client:
         try:
+            headers = {
+                "User-Agent": USER_AGENT,
+            }
             params = {
                 "format": "json",
                 "EPHEM_TYPE": "OBSERVER",
@@ -16,7 +19,9 @@ async def get_ephemerides_data():
                 "STEP_SIZE": "1d",
                 "COMMAND": -31,
             }
-            response = await client.get(apiUrl, params=params)
+            response = await client.get(
+                SSD_JPL_NASA_URL, headers=headers, params=params
+            )
             response.raise_for_status()
             return response.json()
         except httpx.TimeoutException:
